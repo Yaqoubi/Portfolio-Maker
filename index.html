@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سامانه‌ی ساخت پوشه‌ی کار</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.css" crossorigin="anonymous">
+    <script src="assets/js/xlsx.full.min.js"></script>
+</head>
+<body>
+<div>
+    <div class="container">
+        <div class="row text-center py-3">
+            <h1 class="fw-bolder">سامانه‌ی ساخت خودکار پوشه‌ی کار</h1>
+        </div>
+        <div class="row">
+            <div class="col py-2 bg-warning-subtle">
+                <div class="row py-1">
+                    <div class="col-lg-3">
+                        <label for="school-name">نام مدرسه</label>
+                    </div>
+                    <div class="col">
+                        <input class="w-100" type="text" name="school-name" id="school-name">
+                    </div>
+                </div>
+                <div class="row py-1">
+                    <div class="col-lg-3">
+                        <label for="province-name">استان</label>
+                    </div>
+                    <div class="col">
+                        <input class="w-100" type="text" name="province-name" id="province-name">
+                    </div>
+                </div>
+                <div class="row py-1">
+                    <div class="col-lg-3">
+                        <label for="city-name">شهرستان</label>
+                    </div>
+                    <div class="col">
+                        <input class="w-100" type="text" name="city-name" id="city-name">
+                    </div>
+                </div>
+                <div class="row py-1">
+                    <div class="col-lg-3">
+                        <label for="select-grade">انتخاب پایه</label>
+                    </div>
+                    <div class="col">
+                        <select name="select-grade" id="select-grade" aria-label="size 3 select example" class="form-select select-grade">
+                            <option value="همه">همه</option>
+                            <option value="اول">اول</option>
+                            <option value="دوم">دوم</option>
+                            <option value="سوم">سوم</option>
+                            <option value="چهارم">چهارم</option>
+                            <option value="پنجم">پنجم</option>
+                            <option value="ششم">ششم</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row py-1">
+                    <div class="col-lg-3">
+                        <label for="select-academic-year">سال تحصیلی</label>
+                    </div>
+                    <div class="col">
+                        <select name="select-academic-year" id="select-academic-year" aria-label="size 3 select example" class="form-select select-grade">
+                            <option value="1404-1403" selected>1403-1404</option>
+                            <option value="1405-1404">1404-1405</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row py-1">
+                    <div class="col-lg-3">
+                        <label for="excel-file">فایل اکسل</label>
+                    </div>
+                    <div class="col">
+                        <input type="file" id="excel-file" accept=".xlsx, .xls, .csv">
+                    </div>
+                </div>
+                <div class="row py-1">
+                    <div class="col-lg-3"></div>
+                    <div class="col">
+                        <button type="submit" id="submit" class="btn btn-secondary w-100 btn-block">ساخت و چاپ پوشه‌کار</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 bg-success-subtle py-2">
+                <p class="p-text-justify">
+                    سامانه‌ی
+                    <b>ساخت خودکار پوشه‌ی کار</b>
+                    به شما کمک می‌کند تا بتوانید برای دانش‌آموزان خود به‌صورت یکجا پوشه‌ی کار
+                    استاندارد بسازید و به سادگی در سایز A4 چاپ کنید.
+                    برای شروع کافیست مدیر مدرسه فایل اکسل را از سامانه‌ی سیدا دریافت کند و سپس
+                    با پر کردن فرم مقابل، روی کلید
+                    <b>ساخت و چاپ پوشه‌ی کار</b>
+                    کلیک کند.
+                </p>
+                <hr>
+                <p class="p-text-justify">
+                    <b><u>دریافت فایل اکسل:</u></b><br>
+                    برای دریافت فایل اکسل موردنیاز کافیست مراحل زیر را طی کنید. طی کردن
+                    این مراحل فقط برای اولین بار لازم است و برای دفعات بعدی نیاز به انجامشان نیست.<br>
+                </p>
+                <ol class="p-text-justify">
+                    <li>
+                        اگر پنل Bookmarks مرورگر بسته است، با زدن کلیدهای
+                        <span class="button-bg">Ctrl+Shift+B</span>
+                        آن را باز کنید.
+                    </li>
+                    <li>
+                        لینک
+                        <a class="button-bg" href="javascript:(function(){var script=document.createElement('script');script.src='http://localhost:63342/assets/js/bookmark.js';document.head.appendChild(script);})();">
+                        ساخت فایل اکسل در سیدا</a>
+
+                        را به پنل Bookmarks درگ کنید.
+                    </li>
+                    <li>
+                        وارد سامانه‌ی سیدا شوید.
+                    </li>
+                    <li>
+                        از منوی «عملیات اولیه» گزینه‌ی «سازماندهی و ثبت‌نام»
+                        و سپس «مشخصات فردی و پرونده تحصیلی دانش‌آموزان» را انتخاب کنید.
+                    </li>
+                    <li>
+                        بعد از ورود به صفحه‌ی مشخصات دانش‌آموزان، روی Bookmark
+                        <b><u>ساخت فایل اکسل در سیدا</u></b>
+                        کلیک کنید.
+                    </li>
+                    <li>
+                        فایل اکسل موردنیاز، به صورت خودکار ساخته و دانلود خواهد شد.
+                    </li>
+                </ol>
+                <hr>
+                <p class="p-text-justify">
+                    درصورت تمایل می‌توانید برای مشاهده‌ی فیلم راهنما
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorial-video">
+                        اینجا
+                    </button>
+                    کلیک کنید.
+                </p>
+            </div>
+        </div>
+        <div class="row py-3 text-center bg-secondary-subtle">
+        <span>
+            طراحی شده با ❤️ در اداره آموزش و پرورش شهرستان جویبار
+            <br>
+            راه ارتباط با ما:
+            09334272616
+        </span>
+        </div>
+    </div>
+</div>
+
+<iframe id="folders-iframe" src="assets/raw-iframe.html" width="1" height="1"></iframe>
+<iframe id="template-iframe" src="assets/iframe.html" width="100%" height="600px" style="display: none"></iframe>
+
+
+<!-- Modal -->
+<div class="modal fade" id="tutorial-video" tabindex="-1" aria-labelledby="tutorial-video-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="tutorial-video-label">راهنمای کار با سامانه</h1>
+            </div>
+            <div class="modal-body">
+                <video width="100%" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    مرورگر شما از نمایش ویدیو پشتیبانی نمی‌کند!
+                </video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+</body>
+</html>

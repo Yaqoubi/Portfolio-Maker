@@ -1,0 +1,448 @@
+@font-face {
+    font-family: ShabnamFarsiDigit;
+    src: url('fonts/Shabnam-FD.eot');
+    src: url('fonts/Shabnam-FD.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Shabnam-FD.woff2') format('woff2'),
+    url('fonts/Shabnam-FD.woff') format('woff'),
+    url('fonts/Shabnam-FD.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: ShabnamFarsiDigit;
+    src: url('fonts/Shabnam-Bold-FD.eot');
+    src: url('fonts/Shabnam-Bold-FD.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Shabnam-Bold-FD.woff2') format('woff2'),
+    url('fonts/Shabnam-Bold-FD.woff') format('woff'),
+    url('fonts/Shabnam-Bold-FD.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: ShabnamFarsiDigit;
+    src: url('fonts/Shabnam-Thin-FD.eot');
+    src: url('fonts/Shabnam-Thin-FD.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Shabnam-Thin-FD.woff2') format('woff2'),
+    url('fonts/Shabnam-Thin-FD.woff') format('woff'),
+    url('fonts/Shabnam-Thin-FD.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: ShabnamFarsiDigit;
+    src: url('fonts/Shabnam-Light-FD.eot');
+    src: url('fonts/Shabnam-Light-FD.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Shabnam-Light-FD.woff2') format('woff2'),
+    url('fonts/Shabnam-Light-FD.woff') format('woff'),
+    url('fonts/Shabnam-Light-FD.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: ShabnamFarsiDigit;
+    src: url('fonts/Shabnam-Medium-FD.eot');
+    src: url('fonts/Shabnam-Medium-FD.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Shabnam-Medium-FD.woff2') format('woff2'),
+    url('fonts/Shabnam-Medium-FD.woff') format('woff'),
+    url('fonts/Shabnam-Medium-FD.ttf') format('truetype');
+    font-weight: 500;
+}
+* {
+    font-family: ShabnamFarsiDigit, serif;
+}
+
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .page {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto; /* وسط‌چین کردن صفحه در هنگام پرینت */
+        padding: 0;
+        box-sizing: border-box;
+        background: white;
+        border: 1px solid #ccc;
+    }
+}
+.page {
+    background-image: url("../images/bg.jpg");
+    background-repeat: repeat;
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0 auto;
+    padding: 5mm;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    position: relative
+}
+.cover-bg {
+    background-image: url("../images/cover-background.jpg");
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+body {
+    direction: rtl;
+}
+
+
+.parents-evaluation-table {
+    position: relative;
+    top: 12mm;
+    table {
+        border-collapse: collapse;
+        width: 180mm;
+        margin: 5mm;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: right;
+        padding: 8px;
+    }
+
+    td:nth-child(1) {
+        width: 35mm;
+        height: 41mm;
+        text-align: center;
+    }
+}
+.self-evaluation-table {
+    position: relative;
+    top: 12mm;
+    table {
+        border-collapse: collapse;
+        width: 180mm;
+        margin: 5mm;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: right;
+        padding: 8px;
+    }
+    td:nth-child(1) {
+        width: 33mm;
+        height: 31mm;
+        text-align: center;
+    }
+    td:nth-child(2), td:nth-child(3){
+        width: 70mm;
+    }
+    tr:nth-child(1) {
+        td {
+            height: 8mm;
+            text-align: center;
+        }
+    }
+
+}
+
+
+.absences-table {
+    position: relative;
+    top: 12mm;
+    table {
+        border-collapse: collapse;
+        width: 180mm;
+        margin: 5mm;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: right;
+        padding: 8px;
+        height: 5mm;
+    }
+    td {
+        width: 10mm;
+    }
+    td:nth-child(1) {
+        text-align: center;
+    }
+    tr:nth-child(n+2) {
+        td {
+            text-align: center;
+            direction: ltr;
+        }
+        td:nth-child(2)::before {
+            content: '140\00a0\00a0\00a0/\00a0\00a0\00a0\00a0/\00a0\00a0\00a0\00a0';
+        }
+    }
+
+    tr:nth-child(1) {
+        td:nth-child(1), td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+            height: 30mm;
+            writing-mode: vertical-rl;
+            text-align: center;
+        }
+        td:nth-child(2) {
+            text-align: center;
+            width: 30mm;
+        }
+        td:nth-child(3) {
+            text-align: center;
+            width: 80mm;
+        }
+    }
+}
+
+.abnormality-table {
+    position: relative;
+    top: 12mm;
+    table {
+        border-collapse: collapse;
+        /*width: 180mm;*/
+        margin: 5mm;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: center;
+        padding: 8px;
+        height: 20mm;
+    }
+    tr:nth-child(n+2) {
+        td {
+            writing-mode: vertical-rl;
+            text-align: center;
+            direction: ltr;
+        }
+        td:nth-child(2)::before {
+            content: '140\00a0\00a0\00a0/\00a0\00a0\00a0\00a0/\00a0\00a0\00a0\00a0';
+        }
+        td:nth-child(1) {
+            writing-mode: horizontal-tb;
+        }
+    }
+
+    td {
+        width: 10mm;
+    }
+    tr:nth-child(1) {
+        td {
+            height: 12mm;
+        }
+        td:nth-child(1), td:nth-child(2), td:nth-child(3) {
+            writing-mode: vertical-rl;
+            text-align: center;
+            width: 5mm;
+        }
+        td:nth-child(4) {
+            text-align: center;
+            width: 160mm;
+        }
+    }
+}
+
+
+.manager-evaluation-table {
+    position: relative;
+    top: 12mm;
+    table {
+        border-collapse: collapse;
+        /*width: 180mm;*/
+        margin: 5mm;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: right;
+        padding: 8px;
+        height: 15mm;
+    }
+    td {
+        width: 10mm;
+    }
+    td:nth-child(1) {
+        text-align: center;
+    }
+    tr:nth-child(1) {
+        td {
+            height: 30mm;
+        }
+        td:nth-child(1), td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
+            writing-mode: vertical-rl;
+            text-align: center;
+            width: 5mm;
+        }
+        td:nth-child(2) {
+            text-align: center;
+            width: 170mm;
+        }
+    }
+}
+
+
+.teacher-evaluation-table {
+    position: relative;
+    top: 12mm;
+    table {
+        border-collapse: collapse;
+        margin: 5mm;
+    }
+
+    td, th {
+        border: 1px solid #000;
+        text-align: center;
+        padding: 8px;
+        height: 15mm;
+    }
+    td {
+        width: 10mm;
+    }
+    td:nth-child(1) {
+        text-align: center;
+    }
+    tr:nth-child(1) {
+        td {
+            height: 12mm;
+        }
+        td:nth-child(1) {
+            writing-mode: vertical-rl;
+            text-align: center;
+            width: 5mm;
+        }
+        td:nth-child(2),
+        td:nth-child(3) {
+            width: 44mm;
+            text-align: center;
+        }
+        td:nth-child(4) {
+            text-align: center;
+            width: 170mm;
+        }
+    }
+    tr:nth-child(n+1) {
+        td:nth-child(n+1) {
+            writing-mode: horizontal-tb;
+        }
+    }
+}
+
+.iri-cover {
+    width: 30mm;
+}
+
+.cover-header {
+    position: absolute;
+    top: 3cm;
+    text-align: center;
+    line-height: 6mm;
+    right: 30mm;
+    width: 150mm;
+    span {
+        /*font-family: 'Sahel SemiBold',serif;*/
+    }
+    .br-span::after {
+        content: '';
+        display: block;
+    }
+}
+
+.cover-information {
+    position: absolute;
+    top: 90mm;
+    text-align: center;
+    width: 95%;
+    line-height: 13mm;
+    img {
+        width: 25mm;
+        border-radius: 10px;
+        border: solid 1px black;
+    }
+    span {
+        /*font-family: 'Sahel Black',serif;*/
+        font-size: 7mm;
+    }
+}
+
+.cover-academic-year {
+    width: 95%; text-align: center;
+    bottom: 27mm;
+    position: absolute;
+    /*font-family: 'Sahel SemiBold',serif;*/
+    font-size: 5mm;
+}
+.watermark {
+    background-color: white;
+    padding: 1mm;
+    border-radius: 2mm;
+    width: 60mm;
+    text-align: center;
+    font-weight: 700;
+    bottom: 5mm;
+    position: absolute;
+    /*font-family: Shabnam,serif;*/
+    font-size: 3.5mm;
+    right: 75mm;
+    border: 0.75mm solid black;
+}
+
+.watermark::before {
+    content: 'طراحی شده توسط وب‌سایت ali.id.ir';
+}
+
+.padding-10mm {
+    padding: 10mm;
+}
+
+.form-main-content {
+    position: relative;
+    /*font-family:Sahel,serif;*/
+    width: 100%;
+    height: 100%;
+    border: 1mm solid black;
+}
+
+.form-title {
+    /*font-family: 'Sahel Black',serif;*/
+    font-size: 6.5mm;
+    top: 5mm;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.form-content {
+    position:relative;
+    top: 15mm;
+}
+
+.form-information {
+    top: -3mm;
+    /*font-family: 'Sahel SemiBold', serif;*/
+    width: 100%;
+    background-color: bisque;
+    padding: 2mm 10mm 2mm 10mm;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.self-evaluation-description {
+    position: relative;
+    top: 15mm;
+    text-align: justify; padding: 0 4mm 0 4mm;
+    /*background-color: beige;*/
+}
+
+.manager-signature {
+    position: absolute;
+    left: 30mm;
+    bottom: -30mm;
+}
